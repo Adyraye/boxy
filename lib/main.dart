@@ -1,18 +1,28 @@
 import 'package:box_delivery_app/controllers/login_controller.dart';
 import 'package:box_delivery_app/controllers/onboarding_provider.dart';
-import 'package:box_delivery_app/views/login_view.dart';
-import 'package:box_delivery_app/views/signup_view.dart';
+import 'package:box_delivery_app/controllers/otp_controller.dart';
+import 'package:box_delivery_app/controllers/signupcomp_controller.dart';
+import 'package:box_delivery_app/views/auth/forget_pass/for_success.dart';
 import 'package:flutter/material.dart';
 import 'package:box_delivery_app/views/splash_screen.dart';
 import 'package:provider/provider.dart';
 
+import 'controllers/for_otp.dart';
 import 'controllers/signup_controller.dart';
+import 'controllers/user_controller_for.dart';
+import 'controllers/verification_controller.dart';
 
 void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => AuthController()),
+        ChangeNotifierProvider(create: (_) =>AuthController()),
+        ChangeNotifierProvider(create: (_) =>OTPController()),
+        ChangeNotifierProvider(create: (_) =>UserController1()),
+        ChangeNotifierProvider(create: (_) =>UserController()),
+        ChangeNotifierProvider(create: (_) =>VerificationController()),
+        ChangeNotifierProvider(create: (_) =>OtpController()),
+        ChangeNotifierProvider(create: (_) =>SignUpController())
       ],
       child: const MyApp(),
     ),
@@ -49,7 +59,7 @@ class MyApp extends StatelessWidget {
           background: Colors.white,
         ),
       ),
-      home:  SplashScreen(),
+      home:SplashScreen(),
     );
   }
 }
