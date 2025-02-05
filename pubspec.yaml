@@ -36,7 +36,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   provider: ^6.1.1
-
+  flutter_svg: ^2.0.17
+  image_picker: ^1.0.4
 
 dev_dependencies:
   flutter_test:
@@ -55,11 +56,29 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
+    - assets/edit_item.png
     - assets/onboarding.png
     - assets/onboarding2.png
     - assets/onboarding3.png
     - assets/google.png
     - assets/signup_completed.png
+    - assets/bar_code.png
+    - assets/final.png
+    - assets/edit_pen.png
+    - assets/pen_edit.png
+    - assets/delete_box.png
+    - assets/james_cooper.png
+    - assets/real_james.png
+    - assets/final.png
+
+    - assets/final_gadget.png
+    - assets/delete_box.png
+    - assets/edit_pen.png
+    - assets/pen_edit.png
+    - assets/qr_scan.png
+    - assets/invalid_qr.png
+    - assets/profile_image.png
+
     # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
